@@ -1,0 +1,25 @@
+# ── Maven ──────────────────────────────────────────────
+target/
+*.jar
+*.war
+*.ear
+
+# ── IDEs ───────────────────────────────────────────────
+.idea/
+*.iml
+.vscode/
+.eclipse/
+.settings/
+.classpath
+.project
+
+# ── Sistema operativo ──────────────────────────────────
+.DS_Store
+Thumbs.db
+
+# ── Logs ───────────────────────────────────────────────
+*.log
+
+# ── SonarQube ──────────────────────────────────────────
+.sonar/
+.scannerwork/
