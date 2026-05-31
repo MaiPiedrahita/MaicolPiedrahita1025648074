@@ -163,6 +163,14 @@ class ProductServiceTest {
                 service.getProductById(null)
             );
         }
+
+        @Test
+        @DisplayName("✖ Lanza InvalidProductException si el id está en blanco")
+        void deberiLanzarExcepcionConIdEnBlanco() {
+            assertThrows(InvalidProductException.class, () ->
+                service.getProductById("   ")
+            );
+        }
     }
 
     // ════════════════════════════════════════════════════════════════════════
