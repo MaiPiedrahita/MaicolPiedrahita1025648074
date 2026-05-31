@@ -255,6 +255,16 @@ class ProductServiceTest {
                 service.updateProduct("P032", "Ventilador", "Ventilador USB", -5.0, 20)
             );
         }
+
+        @Test
+        @DisplayName("✖ Lanza InvalidProductException si la cantidad es negativa en actualización")
+        void deberiLanzarExcepcionConCantidadNegativaEnActualizacion() {
+            service.createProduct("P033", "Teclado", "Teclado mecánico", 85.0, 10);
+
+            assertThrows(InvalidProductException.class, () ->
+                service.updateProduct("P033", "Teclado", "Teclado mecánico", 85.0, -3)
+            );
+        }
     }
 
     // ════════════════════════════════════════════════════════════════════════
